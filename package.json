@@ -4,7 +4,7 @@
   "description": "야놀자와 유사한 여행 예약 서비스 프론트엔드",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
@@ -13,7 +13,8 @@
     "seed": "node prisma/seed.js",
     "generate-csv": "node scripts/generate-accommodations-csv.js",
     "assign-stock": "node scripts/assign-stock.js",
-    "update-imageurls": "node scripts/update-imageurls.js"
+    "update-imageurls": "node scripts/update-imageurls.js",
+    "postinstall": "prisma generate"
   },
   "keywords": [],
   "author": "",
